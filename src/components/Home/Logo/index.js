@@ -1,28 +1,26 @@
 import "./index.scss";
 //import LogoS from "../../../assets/images/logo-v.png";
 import { useEffect, useRef } from "react";
-import DrawSVGPlugin from "gsap-trial/DrawSVGPlugin";
-import gsap from "gsap-trial";
 
 const Logo = () => {
   const bgRef = useRef();
   const outlineLogoRef = useRef();
   console.log(outlineLogoRef);
 
-  useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin);
+  // useEffect(() => {
+  //   gsap.registerPlugin(DrawSVGPlugin);
 
-    gsap
-      .timeline()
-      .to(bgRef.current, {
-        duration: 1,
-        opacity: 1,
-      })
-      .from(outlineLogoRef.current, {
-        drawSVG: 0,
-        duration: 20,
-      });
-  }, []);
+  //   gsap
+  //     .timeline()
+  //     .to(bgRef.current, {
+  //       duration: 1,
+  //       opacity: 1,
+  //     })
+  //     .from(outlineLogoRef.current, {
+  //       drawSVG: 0,
+  //       duration: 20,
+  //     });
+  // }, []);
   return (
     <div className="logo-container" ref={bgRef}>
       <svg
